@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2> Welcome </h2>
+        <h3>{{obj.name}}</h3>
+        <p>{{obj.services}}</p>
+        <form method="POST">
+            {% csrf_token %}
+            <h5>do you want to delete this image</h5>
+           <input type="submit" style="background-color: tomato;" value="yes">
+            <a href="/index" style="background-color: grey;">canecel</a>
+          </form>
+
+    </div>
+</body>
+<div class="col-lg-4 col-md-6 footer-newsletter">
+    <h4>Enjoy our discounted service today</h4>
+    <p>join our hundereds of customer to enjoy about discount,and get  all feel of our standard spar and skincare a trial would convince you. </p>
+   
+     <a href="/Contact">  <button style="background-color: rgb(255, 196, 86);padding-right: 121px;padding-left: 121px;box-shadow: 1px 1px 1px  whitesmoke;border-radius: 5px;">CLICK NOW</button></a>
+   
+  </div>ude "testimonials.html" %}
+</html>

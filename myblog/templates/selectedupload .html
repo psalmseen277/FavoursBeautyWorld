@@ -1,0 +1,21 @@
+{% extends "head.html" %}
+{% block page_content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<br>
+<body>
+    {% for x in photo %}
+    <div style="display: inline-block;background-color: rgb(187, 188, 188);padding: 30px;margin-left: 25px;margin-right:40px;margin-bottom:5px;border-radius: 10px;">
+        <img src="{{ x.image.url }}" style="float: center; display:flex; border-radius: 20px;"width="300px" height="320px" alt=""><br>
+        <h3 class="col-md-12" style="border-radius: 7px; font-weight: 600; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;background-color: rgb(255, 150, 167);;">{{ x.name }}</h3>
+    </div>
+
+
+</body>
+{% include "testimonials.html" %}
+</html> {% endfor %}  {% endblock %} 

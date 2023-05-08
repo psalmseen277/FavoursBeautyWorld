@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+  
+{% block content %}
+
+ {% load static %}
+<!-- <ul style="background-color: aliceblue; display: flex; border-radius: 10px; width: 530px;padding: 10px;">
+    <div> -->
+    {% for x in object %}
+    <!-- <img height="250px" src="{{x.image.url}}" alt="">
+    <li style="background-color: rgb(153, 221, 203);
+    width: 50px;"><h1>{{object.title}}</h1></li>
+    
+    
+   <li> <p>{{x.description}}</p></li>
+    <li><p>this is the price {{x.price}}</p></li> -->
+
+
+
+<div style="padding: 5px;display: flex;" class="card">
+    <div class="row">
+        <div class="col-md-4">
+     <img style="width: 250px; padding-bottom: 90px;" src="{{x.image.url}}" width="100px" class="card-img-top" alt="...">
+     </div>
+     <div class="col-md-8">
+     
+          
+          <div style="font-size: 30px;" class="card-body">
+            <h1 class="card-title">{{x.title}}</h1>
+            <p class="card-text">{{x.description}}.</p>
+            <p class="card-text">{{x.price}}.</p>
+            <!-- <div class="row">
+                <div class="col-6 col-sm-4">Category</div>
+                <div class="col-6 col-sm-4">Area</div>
+                
+                <div class="w-25 d-none d-md-block"></div>
+                
+                <div class="col-6 col-sm-4">Vegeterian</div>
+                <div class="col-6 col-sm-4">Italian</div>
+                
+            
+            </div> -->
+            <button type="button" class="btn btn-warning amla">read more...</button>
+          </div>
+         <div class="row">
+          
+
+         </div>
+         
+    </div>
+        
+        </div>
+    </div>
+
+
+
+
+
+
+    {%endfor%} 
+
+
+{% endblock %}

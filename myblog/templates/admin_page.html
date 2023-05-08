@@ -1,0 +1,43 @@
+{% extends "head.html" %}
+{% block page_content %}{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="row mt-5 justify-content-center" data-aos="fade-up" class="form-label" style="margin: 50px;" >
+    <h3 style="text-align: center;font-size: 40px;background-color:bisque;font-weight: normal;font-size: 2rem;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">click any of the links to to uplaod or delete image</h3>
+    <br>
+    <br>
+    <ul style="font-size:30px; color: rgb(139, 15, 211); background-color: rgb(245, 201, 185); border-radius: 20px;text-align: center;">
+      <a href="/upload" style="font-weight: normal;font-size: 1.5rem;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Upload images here</a>
+      <hr>
+      <a href="/index" style="font-weight: normal;font-size: 1.5rem;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Delete images here</a>
+      <hr>
+      <a href="/seemessages" style="font-weight: normal;font-size: 1.5rem;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" >See visitors messages</a>
+    
+  </div>
+
+</body>
+ <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <!-- {% include "testimonials.html" %} -->
+
+
+  </html> 
+   {% endblock %} 

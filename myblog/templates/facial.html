@@ -1,0 +1,44 @@
+{% extends "head.html" %}
+{% block page_content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<br>
+<body>
+<h2 style="font-weight: 600; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;background-color: rgb(110, 89, 93);text-align: center;background-color: rgb(244, 205, 191);border-radius: 50px;margin-right:50px; margin-left: 50px;"> 
+    <b>Facial Gallery</b>
+  </h2>
+    
+     
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+      <div class="row portfolio-container" data-aos="fade-up">
+   {% for x in photo %}
+        <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <img src="{{ x.image.url }}" style="height: 300px;" class="img-fluid" alt="" height="50px" width="400px" >
+          <div class="portfolio-info"> 
+            <h4>{{ x.name }}</h4>
+            
+                    </div> 
+       </div>  {% endfor %}
+  
+        
+        
+  
+      </div>
+    </div>
+  
+    </section>
+  
+  
+
+</body>
+{% include "testimonials.html" %}
+{%load static%}
+{% include "testimonials.html" %}
+</html> {% endblock %} 
+ 

@@ -1,0 +1,36 @@
+{% extends "head.html" %}
+{% block page_content %}{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2 style="margin: 5px; text-align: center; font-style: oblique; font-family:sans-serif">
+    <u>Welcome {{user.username}} messages are here click to view
+  </u>
+</h2>
+
+{% for x in messages %}
+
+
+<a  href="{% url 'seecontent' x.slug x.time %}" >
+  <ul data-aos="fade-up" style=" font-size: 1.2rem;padding: 30px;margin: 10px; background-color: brown  ;">
+    
+    {{x.slug}} {{x.name}} <h9 style="position: absolute; right: 5px; top:68%;font-size:0.8rem;"> {{x.time}}</h9>
+  </ul>
+</a>
+
+<hr>
+
+
+
+{%  endfor%}
+{% include "testimonials.html" %}
+{%load static%}
+{% include "testimonials.html" %}
+  </html> 
+  {% endblock %} 
+ 

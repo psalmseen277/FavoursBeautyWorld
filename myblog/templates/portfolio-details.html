@@ -1,0 +1,19 @@
+{% extends "head.html" %}
+{% block page_content %}{% load static %}
+
+{% for x in visitors %}
+<h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background-color: whitesmoke;margin: 5px;">Welcome admin!!! @{{x.name}} sent a message </h2>
+<h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;background-color: whitesmoke;margin: 5px;">reply @{{x.name}} by Mail,click on his email address to do that</h3>
+<div data-aos="fade-up" style="font-style: italic;font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 50px; padding: 5px; border-radius: 5px; background-color: thistle; font-style: unset;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> 
+<legend style="background-color:rgb(231, 192, 192); padding: 5px; border-radius: 5px;" >
+    <h1 style="font-size: 30px;">{{ x.name }} {{x.slug}} {{x.time}}</h1>
+    <h4 style="font-size: 13px;margin-top: -11px;"><a href="">email: {{ x.gmail }}</a> </h4>
+</legend>
+<h1 >{{x.subject}}</h1>
+<h5 style="background-color: white;padding: 10px;border-radius: 10px;">{{ x.content }}</h5>
+</div>
+{%  endfor%}
+<!-- {% include "testimonials.html" %} -->
+
+
+{% endblock %} 
